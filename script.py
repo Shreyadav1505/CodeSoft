@@ -14,7 +14,7 @@ def draw_boundary(img, classifier, scaleFactor, minNeighbours, color, text, clf)
         cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
         id, _ = clf.predict(gray_img[y:y+h, x:x+w])
         if id==1:
-            cv2.putText(img, "Shreya", (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
+            cv2.putText(img, "User_Name", (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
         coords =[x, y, w, h]
     return coords
 
